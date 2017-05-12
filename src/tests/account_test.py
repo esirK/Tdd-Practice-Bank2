@@ -1,6 +1,7 @@
 import unittest
 
 from src.src.Account import Account
+from src.src.FixedDepositAccount import FixedDepositAccount
 
 
 class TestAccount(unittest.TestCase):
@@ -15,7 +16,7 @@ class TestAccount(unittest.TestCase):
     def test_every_new_account_is_stored(self):
         a = Account('1020', 900)
         init_accounts = len(a.all_accounts)
-        b = Account('909', 100)
+        b = FixedDepositAccount('909', 100)
         self.assertEqual(init_accounts+1, len(b.all_accounts))
 
 if __name__ == '__main__':
