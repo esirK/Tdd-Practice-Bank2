@@ -1,4 +1,6 @@
 class Account(object):
+    all_accounts = []
+
     def __init__(self, account_id, account_balance):
         """
         Initialize a class with its id and initial account balance
@@ -8,6 +10,7 @@ class Account(object):
         """
         self._account_id = account_id
         self._account_balance = account_balance
+        Account.all_accounts.append(self)
 
     def get_balance(self):
         """
