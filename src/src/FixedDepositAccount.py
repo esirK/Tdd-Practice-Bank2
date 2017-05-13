@@ -7,4 +7,11 @@ class FixedDepositAccount(Account):
         self.minimum_deposit = 100
 
     def check_minimum_balance(self):
+        """
+        add doctest
+        >>> fda = FixedDepositAccount('001', 300)
+        >>> fda.check_minimum_balance()
+        100
+        :return: 
+        """
         return self.minimum_deposit

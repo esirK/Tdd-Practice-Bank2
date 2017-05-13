@@ -12,3 +12,6 @@ class TestFixedAccount(unittest.TestCase):
     def test_fixed_account_is_added_to_list_of_all_other_accounts(self):
         fixed_account = FixedDepositAccount('002', 100)
         self.assertEqual(self.inti_size+1, len(fixed_account.all_accounts))
+
+if __name__ == '__main__':
+    unittest.main()
